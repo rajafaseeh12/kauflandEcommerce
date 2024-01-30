@@ -25,14 +25,14 @@ class FeedService
             $feedItem->link = $data->link;
             $feedItem->image = $data->image;
             $feedItem->brand = $data->Brand;
-            $feedItem->rating = !empty($data->Rating) ? $data->Rating : null;;
+            $feedItem->rating = !empty($data->Rating) ? $data->Rating : null;
             $feedItem->caffeineType = $data->CaffeineType;
             $feedItem->count = !empty($data->Count) ? $data->Count : null;
             $feedItem->flavored = $data->Flavored;
             $feedItem->seasonal = $data->Seasonal;
             $feedItem->instock = $data->Instock;
             $feedItem->facebook = $data->Facebook;
-            $feedItem->IsKCup = $data->IsKCup;
+            $feedItem->IsKCup =  !empty($data->IsKCup) ? $data->IsKCup : null;
 
             $feedItem->save();
         }

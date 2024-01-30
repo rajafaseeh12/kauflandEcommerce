@@ -1,0 +1,9 @@
+I have created application using PHP Laravel with mysql database.
+Here are few steps to run the project
+1. create two databases one for storing of data from xml file and second for testing (As I used mysql so I also used same db for testing)
+2. import the table 'feeditems'(table available in project directory) to both databases.
+3. Now run the command 'php artisan xml:import'
+4. for testing run 'php artisan test'
+5. Errors are stored in logs/laravel.log
+
+We can also extend the application in future by different data storage and file types.

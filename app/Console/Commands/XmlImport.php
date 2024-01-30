@@ -31,9 +31,10 @@ class XmlImport extends Command
         $storageType = Config::get('xmlimport.storage.type', 'database');
         $fileData = Dialogs::askFile($this);
 
-        if(Dialogs::confirmContinue($this)) {
+        if(Dialogs::confirmContinue($this)) { 
             try {
                 if ($storageType === 'database') {
+                    $this->info('Please wait while data is being stored...');
                     $result = FeedService::storeImportedFeedsToDB($fileData);
                     $this->info($result['logMessage']);
                 } else {
